@@ -68,13 +68,10 @@ def downloadNew():
         while row:
             if assKickTime.notDownloaded(row):
                 assKickLib.downloadEpisode(row)
-                print('Scaricato correttamente')
                 serieFile.seek(serieFile.tell()-3)
                 serieFile.write('v')
                 serieFile.seek(serieFile.tell()+3)
-                row = serieFile.readline()
-            else:
-                row = serieFile.readline()
+            row = serieFile.readline()
     print('Fatto')
     serieFile.close()
     main()

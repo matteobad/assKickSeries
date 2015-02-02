@@ -48,11 +48,8 @@ def updateSerieFile(name, url):
 
     #scrivo su file
     file = open(''.join('serieTV//'+name+'.txt'), 'w')
-    check = 'x'
     for j in range(len(episodes)):
-        if assKickTime.compareDate(date[j]): check = 'v'
-        else: check = 'x'
-        stringFile = ''.join(name.title()+' '+season[i]+'x'+episodes[j]+' '+titles[j]+'; '+date[j]+check+'\n')
+        stringFile = ''.join(name.title()+' '+season[i]+'x'+episodes[j]+' '+titles[j]+'; '+date[j]+'x\n')
         if episodes[j] == '01':
             i -= 1
         file.write(stringFile)
@@ -73,6 +70,9 @@ def downloadEpisode(rawString):
         source = assKickUrl.HTMLsource(torrent.group(0))
         magnetLink = re.search(r'magnet:\S+\b', source).group(0)
         os.startfile(magnetLink)
-    else:
-        print('File non trovato')
+        print('Scaricato correttamente')
+
+
+# Scarica tutte le puntate di una serie TV
+def downloadAll(rawString):
 
