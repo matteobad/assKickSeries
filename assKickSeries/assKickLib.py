@@ -16,7 +16,6 @@ def findSeriePage(name):
     print('Cerco serie TV...')
     for i in range(1,6):
         url = ''.join(searchURL+name.replace(' ', '%20')+'%20s'+season[i]+'e01%20720p')
-        print(url)
         source = assKickUrl.HTMLsource(url)
         serieNumber = re.search(name.replace(' ', '-')+'-tv[0-9]+', source)
         if serieNumber:
