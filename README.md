@@ -16,7 +16,7 @@ Avviare assKickSeries.py e selezionare l'opzione desiderata:
 
 
 # Guida all'uso
-1: Dato un nome cerca e aggiunge in automatico una serie TV alla lista dei preferiti. Verranno creati due file, uno "prefetiti.txt" contenente tutte le serie TV aggiunte nel seguente formato: <b>"nome_serie;url_serie"</b>, e l'altro "serieTV/nome_serie.txt" col seguente formato: <b>"nome_serie 00x00 titolo_puntata; data_uscita(v/x)*".
+1: Dato un nome cerca e aggiunge in automatico una serie TV alla lista dei preferiti. Verranno creati due file, uno <i>"prefetiti.txt"</i> contenente tutte le serie TV aggiunte nel seguente formato: <b>"nome_serie;url_serie"</b>, e l'altro <i>"serieTV/nome_serie.txt"</i> col seguente formato: <b>"nome_serie 00x00 titolo_puntata; data_uscita(v/x)*".
 
 2: Elimina una serie TV da entrambi i file.
 
